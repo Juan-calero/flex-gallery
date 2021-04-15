@@ -1,0 +1,130 @@
+/*===============
+    background images
+=============*/
+.img1 {
+  background: url(../img/aerial.jpg);
+}
+
+.img2 {
+  background: url(../img/beach.jpg);
+}
+
+.img3 {
+  background: url(../img/forest.jpg);
+}
+
+.img4 {
+  background: url(../img/vulcano.jpg);
+}
+
+.img5 {
+  background: url(../img/night.jpg);
+}
+
+/*===============
+    Global
+=============*/
+* {
+  margin: 0%;
+  color: white;
+  text-shadow: 1px 1px 3px black;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+/*===============
+   Gallery Section
+=============*/
+.gallery {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.gallery__section {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: flex-grow 0.2s cubic-bezier(0.42, 0, 0.76, 1.05), -webkit-box-flex 0.2s cubic-bezier(0.42, 0, 0.76, 1.05);
+  transition: flex-grow 0.2s cubic-bezier(0.42, 0, 0.76, 1.05), -webkit-box-flex 0.2s cubic-bezier(0.42, 0, 0.76, 1.05);
+  transition: flex-grow 0.2s cubic-bezier(0.42, 0, 0.76, 1.05);
+  transition: flex-grow 0.2s cubic-bezier(0.42, 0, 0.76, 1.05), -webkit-box-flex 0.2s cubic-bezier(0.42, 0, 0.76, 1.05), -ms-flex-positive 0.2s cubic-bezier(0.42, 0, 0.76, 1.05);
+}
+
+.gallery__section > *:first-child {
+  -webkit-transition: -webkit-transform 0.1s;
+  transition: -webkit-transform 0.1s;
+  transition: transform 0.1s;
+  transition: transform 0.1s, -webkit-transform 0.1s;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.gallery__section.open-active > *:first-child {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.gallery__section > *:last-child {
+  -webkit-transition: -webkit-transform 0.1s;
+  transition: -webkit-transform 0.1s;
+  transition: transform 0.1s;
+  transition: transform 0.1s, -webkit-transform 0.1s;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.gallery__section.open-active > *:last-child {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.gallery__section.open {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+}
+
+.gallery__section.open > h2 {
+  -webkit-transition: font-size 0.2s cubic-bezier(0.42, 0, 0.76, 1.05);
+  transition: font-size 0.2s cubic-bezier(0.42, 0, 0.76, 1.05);
+  font-size: 4rem;
+}
+
+.gallery__section--text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=main.css.map */

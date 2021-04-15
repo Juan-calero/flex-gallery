@@ -1,0 +1,89 @@
+
+/*===============
+    background images
+=============*/
+
+.img1{
+    background: url(../img/aerial.jpg);
+}
+.img2{
+    background: url(../img/beach.jpg);
+}
+.img3{
+    background: url(../img/forest.jpg);
+}
+.img4{
+    background: url(../img/vulcano.jpg);
+}
+.img5{
+    background: url(../img/night.jpg);
+
+}
+
+
+/*===============
+    Global
+=============*/
+
+
+*{
+    margin: 0%;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 2rem;
+}
+h2{
+    font-size: 2rem;
+}
+
+/*===============
+   Gallery Section
+=============*/
+
+.gallery{
+    min-height: 100vh;
+    display: flex;
+    overflow: hidden;
+    &__section{
+        flex: 1;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: 
+            flex-grow 0.2s cubic-bezier(0.42, 0, 0.76, 1.05);
+        & > *:first-child{
+            transition: transform 0.1s;
+            transform: translateY(-100%);
+        }
+        &.open-active > *:first-child{
+            transform: translateY(0);
+        }
+        & > *:last-child{
+            transition: transform 0.1s;
+            transform: translateY(100%);
+        }
+        &.open-active > *:last-child{
+            transform: translateY(0);
+        }
+        &.open{
+            flex: 5;
+            & > h2 {
+            transition: 
+                font-size 0.2s cubic-bezier(0.42, 0, 0.76, 1.05);
+            font-size: 4rem;
+            }
+        }
+        &--text{
+            display: flex;
+            flex: 1;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
