@@ -26,8 +26,9 @@
 =============*/
 * {
   margin: 0%;
-  color: white;
+  color: #5fe7ff;
   text-shadow: 1px 1px 3px black;
+  font-family: 'RocknRoll One', sans-serif;
 }
 
 html {
@@ -38,6 +39,11 @@ html {
 
 h2 {
   font-size: 2rem;
+}
+
+p {
+  text-transform: uppercase;
+  color: white;
 }
 
 /*===============
